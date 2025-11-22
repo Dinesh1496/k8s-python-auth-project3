@@ -1,0 +1,85 @@
+>> curl http://demo.local/tasks/list
+
+
+StatusCode        : 200                                                                                                                                                                                            StatusDescription : OK                                                                                                                                                                                             Content           : {"tasks":["Task 1","Task 2","Task 3"]}                                                                                                                                                         RawContent        : HTTP/1.1 200 OK                                                                                                                                                                                                    Connection: keep-alive
+                    Content-Length: 38
+                    Content-Type: application/json
+                    Date: Sat, 22 Nov 2025 10:10:37 GMT
+
+                    {"tasks":["Task 1","Task 2","Task 3"]}
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Content-Length, 38], [Content-Type, application/json], [Date, Sat, 22 Nov 2025 10:10:37 GMT]}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 38
+
+
+
+PS C:\Windows\system32>
+>> curl http://demo.local/users/profile?username=Dinesh
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : {"user":"Dinesh","token_received_from_auth":"dummy-token"}
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Content-Length: 58
+                    Content-Type: application/json
+                    Date: Sat, 22 Nov 2025 10:10:45 GMT
+
+                    {"user":"Dinesh","token_received_from_auth":"dummy-token"}
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Content-Length, 58], [Content-Type, application/json], [Date, Sat, 22 Nov 2025 10:10:45 GMT]}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 58
+
+
+
+PS C:\Windows\system32>
+>> curl http://demo.local/auth/login?username=Dinesh
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : {"message":"User Dinesh logged in","token":"dummy-token"}
+RawContent        : HTTP/1.1 200 OK
+                    Connection: keep-alive
+                    Content-Length: 57
+                    Content-Type: application/json
+                    Date: Sat, 22 Nov 2025 10:11:13 GMT
+
+                    {"message":"User Dinesh logged in","token":"dummy-token"}
+Forms             : {}
+Headers           : {[Connection, keep-alive], [Content-Length, 57], [Content-Type, application/json], [Date, Sat, 22 Nov 2025 10:11:13 GMT]}
+Images            : {}
+InputFields       : {}
+Links             : {}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 57
+
+
+
+PS C:\Windows\system32>
+
+
+
+================================================
+
+
+dk@DK:~$ curl http://demo.local/auth/login?username=Dinesh
+{"message":"User Dinesh logged in","token":"dummy-token"}dk@DK:~$
+dk@DK:~$ curl http://demo.local/users/profile?username=Dinesh
+{"user":"
+dk@DK:~$ curl http://demo.local/tasks/list
+{"tasks":["Task 1","Task 2","Task 3"]}dk@DK:~$
+dk@DK:~$
+dk@DK:~$
+
+
+
